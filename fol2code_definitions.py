@@ -78,6 +78,7 @@ def UniversalQuantification(formula: str, variable_symbol: str):
     assert variable_symbol in formula or f'${variable_symbol}' in formula
     return '\u2200{} ({})'.format(variable_symbol, formula)
 
+# TODO - remove parentheses from the formula, if we compare tree nodes then we don't need to parenthesize, too complicated
 def Parenthesize(formula: str):
     """Wrap a formula in parentheses for proper grouping"""
     return f'({formula})'
